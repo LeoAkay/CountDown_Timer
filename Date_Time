@@ -1,0 +1,25 @@
+from datetime import timedelta
+
+days = 2
+hours = 14
+minutes = 12
+days_added = datetime.timedelta(days = days, hours = hours,  minutes = minutes)
+
+d=datetime.datetime.today() +  days_added
+print(d.strftime('%d-%h-%Y-%X'))
+
+--------OR-----------
+from datetime import timedelta
+
+days = 2
+days_added = datetime.timedelta(days = days)
+
+hours = 14
+hours_added = datetime.timedelta(hours = hours)
+
+minutes = 12
+minutes_added = datetime.timedelta (minutes=minutes)
+
+current_time = days_added + hours_added + minutes_added
+d=datetime.datetime.today() + current_time
+print(d.strftime('%d-%h-%Y-%X'))
